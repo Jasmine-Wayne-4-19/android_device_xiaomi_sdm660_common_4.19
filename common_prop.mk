@@ -248,6 +248,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
     persist.vendor.qcomsysd.enabled=1 \
     ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.perf.scroll_opt=true
 
 # QTI
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
