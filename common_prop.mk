@@ -183,6 +183,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
     vendor.display.disable_skip_validate=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
+    vendor.gralloc.disable_ahardware_buffer=1 \
     vendor.display.enable_default_color_mode=0
 
 # The default sf phase offset is set to 6ms, to avoid it be included into next
