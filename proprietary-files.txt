@@ -529,7 +529,6 @@ product/framework/QtiTelephonyServicelibrary.jar|ea30b05eaad3ebee157421b3f31bf85
 product/framework/qcrilhook.jar|23768fda90519d799e682fd058ec85b7b5cd6f89
 product/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|fff4848e33826eaf20ffc5e70b276fac3075f970
 product/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|e373dabf09b40e75f75d58aed4a790809869f96d
-vendor/bin/ATFWD-daemon|540d63133a5edb0e4e39fd0ec6bcf34939f58ca6
 vendor/bin/adpl|b83161d768008660c206d2ab2ca2a9ffe0bb7934
 vendor/bin/hw/qcrild|f93d342973cf7241fd56d03dcf3ca8ef5f4e1464
 vendor/bin/netmgrd|8818e9adb56f976447352585bbd44478cd2c4300
@@ -552,7 +551,6 @@ vendor/lib/libnetmgr.so|2e7784a7668fad5b160a95c7e8d49e52e782bb88
 vendor/lib/libnetmgr_common.so|b015461ac5841fec3975b581c93af073364496bd
 vendor/lib/libnlnetmgr.so|e8ed68971ce839062f5cd430a0f6c42f82d65e3e
 vendor/lib/libxml.so|eb12867786bd5c39fad57152fb1a33f9fd54fc04
-vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so|1883d448fba7e2cd2a69e7677c394c580708a302
 vendor/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|5b4e9d818b534387459e98d9a0093ffac1725b1b
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so|d53faed8e78f31628d43482be1e1b9ab5821269c
 vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so|723a4f1b06827b17013b19c382ff16d6dc67d1bb
@@ -593,7 +591,6 @@ vendor/lib64/qtimutex.so|f8ca19a9ad3ec85e988af034e988183d0cc0a6a7
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|8501ddc8a75b2cd091428590cec5a3b09487ccfa
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|361cb0c9a3df68248f38db1a519f9f1b0ee7d055
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|4e9f6eb0ee54db61b247541526061c71edca256e
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|166f6a50843162a872ce412011340f430289475c
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|120a2919e557b4869ed8eb76f0a0e3080dde3dc9
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|4da8925182c695ab627a362a2a5a7059a27aa30a
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|146838ed20318169b4d54f9efee2b97dae08f5fb
