@@ -378,7 +378,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # RRO configuration
 TARGET_USES_RRO := true
 PRODUCT_ENFORCE_RRO_TARGETS := *
-    
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -449,9 +449,9 @@ PRODUCT_PACKAGES += \
 # Privapp-Permissions
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/privapp-permission/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml \
-    $(COMMON_PATH)/configs/privapp-permission/privapp-permissions-qti-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml \
+		$(COMMON_PATH)/configs/privapp-permission/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(COMMON_PATH)/configs/privapp-permission/privapp-permissions-qti-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    $(COMMON_PATH)/configs/privapp-permission/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
+    $(COMMON_PATH)/configs/privapp-permission/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -480,7 +480,12 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5 \
+    android.hardware.radio.config@1.1 \
     android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.1 \
+    rild \
+    libavservices_minijail.vendor \
     librmnetctl \
     libprotobuf-cpp-full \
     qti-telephony-hidl-wrapper \
@@ -596,7 +601,7 @@ PRODUCT_PACKAGES += \
 # Force triple frame buffers
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-   
+
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 USE_DEVICE_SPECIFIC_IPACFG_MGR := true
