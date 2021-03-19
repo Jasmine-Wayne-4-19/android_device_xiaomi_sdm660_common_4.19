@@ -327,6 +327,10 @@ endif
 # Ion
 PRODUCT_PACKAGES += \
     libion
+    
+# Iorap
+PRODUCT_PACKAGES += \
+    iorap-app-startup-runner
 
 # IRQ
 PRODUCT_COPY_FILES += \
