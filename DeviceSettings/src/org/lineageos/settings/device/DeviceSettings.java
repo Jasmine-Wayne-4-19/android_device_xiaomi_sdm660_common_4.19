@@ -62,10 +62,18 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
+    private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
+    private static final String PREF_HEADSET = "dirac_headset_pref";
+    private static final String PREF_PRESET = "dirac_preset_pref";
+
     private static final String DEVICE_DOZE_PACKAGE_NAME = "com.advanced.settings.doze";
 
     private static final String DEVICE_JASON_PACKAGE_NAME = "org.lineageos.settings.devicex";
     private static final String PREF_DEVICE_JASON = "device_jason";
+
+    private SecureSettingSwitchPreference mEnableDirac;
+    private SecureSettingListPreference mHeadsetType;
+    private SecureSettingListPreference mPreset;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -112,6 +120,30 @@ public class DeviceSettings extends PreferenceFragment implements
             return true;
         });
 
+        boolean enhancerEnabled;
+        try {
+            enhancerEnabled = DiracService.sDiracUtils.isDiracEnabled();
+        } catch (java.lang.NullPointerException e) {
+            getContext().startService(new Intent(getContext(), DiracService.class));
+            try {
+                enhancerEnabled = DiracService.sDiracUtils.isDiracEnabled();
+            } catch (NullPointerException ne) {
+                // Avoid crash
+                ne.printStackTrace();
+                enhancerEnabled = false;
+            }
+        }
+
+        mEnableDirac = (SecureSettingSwitchPreference) findPreference(PREF_ENABLE_DIRAC);
+        mEnableDirac.setOnPreferenceChangeListener(this);
+        mEnableDirac.setChecked(enhancerEnabled);
+
+        mHeadsetType = (SecureSettingListPreference) findPreference(PREF_HEADSET);
+        mHeadsetType.setOnPreferenceChangeListener(this);
+
+        mPreset = (SecureSettingListPreference) findPreference(PREF_PRESET);
+        mPreset.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -133,6 +165,33 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_MIC_GAIN:
                 FileUtils.setValue(MIC_GAIN_PATH, (int) value);
+                break;
+
+            case PREF_ENABLE_DIRAC:
+                try {
+                    DiracService.sDiracUtils.setEnabled((boolean) value);
+                } catch (java.lang.NullPointerException e) {
+                    getContext().startService(new Intent(getContext(), DiracService.class));
+                    DiracService.sDiracUtils.setEnabled((boolean) value);
+                }
+                break;
+
+            case PREF_HEADSET:
+                try {
+                    DiracService.sDiracUtils.setHeadsetType(Integer.parseInt(value.toString()));
+                } catch (java.lang.NullPointerException e) {
+                    getContext().startService(new Intent(getContext(), DiracService.class));
+                    DiracService.sDiracUtils.setHeadsetType(Integer.parseInt(value.toString()));
+                }
+                break;
+
+            case PREF_PRESET:
+                try {
+                    DiracService.sDiracUtils.setLevel(String.valueOf(value));
+                } catch (java.lang.NullPointerException e) {
+                    getContext().startService(new Intent(getContext(), DiracService.class));
+                    DiracService.sDiracUtils.setLevel(String.valueOf(value));
+                }
                 break;
 
             case PREF_KEY_FPS_INFO:

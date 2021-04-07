@@ -118,5 +118,10 @@
             android:name=".thermal.ThermalService"
             android:permission="ThermalService">
         </service>
+
+        <service
+            android:name=".DiracService"
+            android:enabled="true"
+            android:stopWithTask="false" />
     </application>
 </manifest>

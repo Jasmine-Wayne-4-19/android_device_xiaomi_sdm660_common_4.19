@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
+import org.lineageos.settings.device.DiracUtils;
 import org.lineageos.settings.device.kcal.Utils;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
 import org.lineageos.settings.device.thermal.ThermalUtils;
@@ -75,6 +76,9 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         // Vibration Strength
         FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
+
+        // Dirac
+        context.startService(new Intent(context, DiracService.class));
 
         // FPS Info
         boolean enabled = Settings.Secure.getInt(context.getContentResolver(),
