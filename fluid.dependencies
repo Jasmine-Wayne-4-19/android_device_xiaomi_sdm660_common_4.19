@@ -1,20 +1,44 @@
 [
   {
-    "remote"	  : "fluid-devices",
-    "repository"  : "kernel_xiaomi_sdm660",
-    "target_path" : "kernel/xiaomi/sdm660",
-    "branch"      : "fluid-11-jasmine"
-  },
-  {
-    "remote"      : "fluid-devices",
-    "repository"  : "vendor_xiaomi_sdm660-common",
-    "target_path" : "vendor/xiaomi/sdm660-common",
-    "branch"      : "fluid-11-jasmine"
-  },
-  {
     "remote"      : "github",
     "repository"  : "clarencelol/android_vendor_xiaomi_MiuiCamera",
     "target_path" : "vendor/xiaomi/MiuiCamera",
     "branch"      : "master"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/hardware_qcom-caf_media_msm8998",
+    "target_path" : "hardware/qcom-caf/msm8998/media",
+    "branch"      : "11"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/hardware_qcom-caf_display_msm8998",
+    "target_path" : "hardware/qcom-caf/msm8998/display",
+    "branch"      : "11"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/hardware_qcom-caf_audio_msm8998",
+    "target_path" : "hardware/qcom-caf/msm8998/audio",
+    "branch"      : "11"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/android_hardware_qcom_wlan",
+    "target_path" : "hardware/qcom-caf/wlan",
+    "branch"      : "android_11-caf"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/android_vendor_codeaurora_telephony",
+    "target_path" : "vendor/codeaurora/telephony",
+    "branch"      : "android_11"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "clarencelol/android_recovery_twrp",
+    "target_path" : "recovery/twrp/xiaomi/jasmine_sprout",
+    "branch"      : "jasmine_sprout"
   }
 ]
