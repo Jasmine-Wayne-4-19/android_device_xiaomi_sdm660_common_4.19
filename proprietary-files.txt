@@ -416,10 +416,11 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 # IRQ balance - from LA.UM.8.2.r1-06700-sdm660.0
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 
-# Listen - from LA.UM.8.2.r1-06700-sdm660.0
+# Listen - from LA.UM.8.2.1.r1-05600-sdm660
+vendor/lib/hw/sound_trigger.primary.sdm660.so|f623b7055ead3bfa2139c30a0f2b2cf721411e0b
 vendor/lib/libadpcmdec.so|8c72aa1812bfa749f266020366894c8a3873d99c
 vendor/lib/libgcs-calwrapper.so|cbf3dbe43161b68adfaf48a9da4e7fedd7b02f5a
-vendor/lib/libgcs-ipc.so|215c2dded9ccd0fc015db2d7008824e332886d2b
+vendor/lib/libgcs-ipc.so|b125f360381aa8c7ebdff04585520770ee0c8902
 vendor/lib/libgcs-osal.so|5f0c6798dbeb9c806706b0cf217440662452364c
 vendor/lib/libgcs.so|ccb6ac9c27021cf4f2ec09994742c38b700c2583
 vendor/lib/libsmwrapper.so|7f7bd7045ced84928ec46b457ec5f21d5228ea3a
@@ -475,7 +476,7 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|785984e3c3b30671b78624484899dd
 vendor/lib/libqti-perfd-client.so|b97271d03ec5aab93125c750181c6ff03d136221
 vendor/lib64/libqti-perfd-client.so|660d1d2a58e10616971c807b638f95b139b5a8e0
 
-# Peripheral manager - from LA.UM.8.2.r1-07400-sdm660.0
+# Peripheral manager - from LA.UM.8.2.1.r1-05600-sdm660
 vendor/bin/pm-proxy|3182c937d93cc02c6721c053f57fc6794ad7edb3
 vendor/bin/pm-service|d41dabf5e4830f93b267d668d37e72aedae48163
 vendor/lib/libperipheral_client.so|6a95436d0d649fff0a48a4662a0781330e723ae1
@@ -752,7 +753,7 @@ vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 # Wi-Fi - from LA.UM.8.2.r1-07400-sdm660.0
 vendor/bin/cnss-daemon|a7b196d0c8204f6fbe445710e8d062d0c2d9b42f
 
-# WFD - from LA.UM.8.2.r1-07400-sdm660.0
+# WFD - from LA.UM.8.2.1.r1-05600-sdm660
 -framework/WfdCommon.jar|3440607d29511e1a671e565a2acc4d262e38a9fb
 -priv-app/WfdService/WfdService.apk|9da05dab9097ef8b016e99fd646b50167309ee5b
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
@@ -767,12 +768,12 @@ lib/libmmparser_lite.so|870feacb7e58caca85c581c70f8ea82dee99b6f4
 lib/libmmrtpdecoder.so|a990ab20d1c970c827b8e12fe377c4965da7b7f5
 lib/libmmrtpencoder.so|c1d969d3600a9b9a7505e4d1f18ab3ac0f111406
 lib/libwfdavenhancements.so|638e27b478a40c550e55615aad313073cc34af7b
-lib/libwfdcodecv4l2.so|b6c50368a3e49adc3aff20e6aaf1a54250ea6342
-lib/libwfdcommonutils.so|b1081d1e744f9320ac389ba9c2b59021806df1a4
-lib/libwfdconfigutils.so|44308a720d3d9fc0b219ee5afc50be018ef0ccfc
+lib/libwfdcodecv4l2.so|7133d5c3f1a7677ece58bc482561bc6905831b27
+lib/libwfdcommonutils.so|1551c2ed7c66d1f849fe9c321b55bc2a6c30f60f
+lib/libwfdconfigutils.so|c4516d317bd83cf8f810c0d4d09b758732f0a1d6
 lib/libwfdmminterface.so|feb2b5323b5ce8da54b69e0fcec17e02197210fc
-lib/libwfdmmsink.so|f3ee14c22d133225ee5ff6e737ce4c15fd3b142f
-lib/libwfdmmsrc.so|9b6723894ca4cad120f2a5928e72870bc3089d73
+lib/libwfdmmsink.so|ea384ed408c2c8fad073f9dd2d13f111028bd02d
+lib/libwfdmmsrc.so|62881e2d5557d46a9d6882337f68531814b86b05
 lib/libwfdrtsp.so|b45df3a3180cea8b76c2201148a06b045ff26495
 lib/libwfdservice.so|93ae07c742ed1d4d76e34094a0534702555fe975
 lib/libwfdsm.so|54a641a98a5b358ce0cd56b1c5a2798704658f18
@@ -790,11 +791,11 @@ vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|5004085e4c19e7812f0c71
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|089b6b4b9217e0fdfc655491fecd6ddc1d027de6
 vendor/lib/libmiracast.so|5fa26485f2e842c986c7f806069c0510f2dab0a4
 vendor/lib/libmmosal_proprietary.so|ad37cb2aae4e9841c9175fbd5247d491fa6a01ac
-vendor/lib/libwfdcommonutils_proprietary.so|af255ba4ce085c7502453b5bf7005f8ccfa78840
-vendor/lib/libwfdhaldsmanager.so|ad8747952cc5f85a68b4eab669897c82b086da05
+vendor/lib/libwfdcommonutils_proprietary.so|3954f1bee8ed440dd6c86315cf9c904ec711523c
+vendor/lib/libwfdhaldsmanager.so|4fdea11d455eae29bbf943fbacec69fe9ff1f128
 vendor/lib/libwfdhdcpcp.so|53cec4263ae5fe79a15783c86d336bb946bfc919
 vendor/lib/libwfdmmservice.so|d25a796600eb252d133c1370f3c62adc7e9a3d03
-vendor/lib/libwfdmodulehdcpsession.so|22b64660d1c0ca946960ecde14795e4de073ccff
+vendor/lib/libwfdmodulehdcpsession.so|220307b93c769fe6a8b761b1d3d6567d3ed0f675
 vendor/lib/vendor.qti.hardware.sigma_miracast@1.0.so|b0239e01e7d91f2a595930651a875671edcdce64
 vendor/lib64/libmiracast.so|beae10ca8d5eb23e9150c2d891c40d1b023a7fab
 vendor/lib64/libmmosal_proprietary.so|82cd85bc45fde0eed23b5f2168214dd879e0f52a
@@ -813,4 +814,3 @@ vendor/lib/liboptizoom.so|1e92993743636c045438f1f15c07c1e835d9ca46
 vendor/lib/libseemore.so|cd207541c3cdd97eb25ef2a9c63662054393e81f
 vendor/lib/libtrueportrait.so|b8e11c098bd859aae6c535cdb87e3e36f6b1c6ef
 vendor/lib/libubifocus.so|833a305c780b2e7e338323c5ba27cb042f5cc3ed
-
