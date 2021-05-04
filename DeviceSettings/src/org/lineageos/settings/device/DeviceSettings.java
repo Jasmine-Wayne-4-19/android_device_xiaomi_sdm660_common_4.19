@@ -43,9 +43,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CATEGORY_NOTIF = "notification_led";
     public static final String PREF_NOTIF_LED = "notification_led_brightness";
     public static final String NOTIF_LED_PATH = "/sys/class/leds/white/max_brightness";
-    
+
     public static final String PREF_KEY_FPS_INFO = "fps_info";
-    
+
     public static final  String CATEGORY_AUDIO_AMPLIFY = "audio_amplify";
     public static final  String PREF_HEADPHONE_GAIN = "headphone_gain";
     public static final  String PREF_MIC_GAIN = "mic_gain";
@@ -67,9 +67,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
-    public static final String PREF_THERMAL = "thermal";
-    public static final String THERMAL_PATH = "/sys/devices/virtual/thermal/thermal_message/sconfig";
-
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
@@ -78,11 +75,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String DEVICE_JASON_PACKAGE_NAME = "org.lineageos.settings.devicex";
     private static final String PREF_DEVICE_JASON = "device_jason";
-    
+
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
     private Preference mClearSpeakerPref;
 
-    private SecureSettingListPreference mTHERMAL;
     private SecureSettingSwitchPreference mFastcharge;
 
     private SecureSettingSwitchPreference mEnableDirac;
@@ -92,7 +88,7 @@ public class DeviceSettings extends PreferenceFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_xiaomi_parts, rootKey);
-        
+
         mClearSpeakerPref = (Preference) findPreference(PREF_CLEAR_SPEAKER);
         mClearSpeakerPref.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), ClearSpeakerActivity.class);
@@ -110,7 +106,7 @@ public class DeviceSettings extends PreferenceFragment implements
             VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
             vibrationStrength.setOnPreferenceChangeListener(this);
         } else { getPreferenceScreen().removePreference(findPreference(CATEGORY_VIBRATOR)); }
-        
+
         // Headphone & Mic Gain
         if (FileUtils.fileWritable(HEADPHONE_GAIN_PATH) && FileUtils.fileWritable(MIC_GAIN_PATH)) {
            CustomSeekBarPreference headphoneGain = (CustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
@@ -136,7 +132,7 @@ public class DeviceSettings extends PreferenceFragment implements
         if (isAppNotInstalled(DEVICE_JASON_PACKAGE_NAME)) {
             displayCategory.removePreference(findPreference(PREF_DEVICE_JASON));
         }
-        
+
         SecureSettingSwitchPreference fpsInfo = (SecureSettingSwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setOnPreferenceChangeListener(this);
 
@@ -147,11 +143,6 @@ public class DeviceSettings extends PreferenceFragment implements
             startActivity(intent);
             return true;
         });
-
-        mTHERMAL = (SecureSettingListPreference) findPreference(PREF_THERMAL);
-        mTHERMAL.setValue(FileUtils.getValue(THERMAL_PATH));
-        mTHERMAL.setSummary(mTHERMAL.getEntry());
-        mTHERMAL.setOnPreferenceChangeListener(this);
 
         boolean enhancerEnabled;
         try {
@@ -200,12 +191,6 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(MIC_GAIN_PATH, (int) value);
                 break;
 
-            case PREF_THERMAL:
-                mTHERMAL.setValue((String) value);
-                mTHERMAL.setSummary(mTHERMAL.getEntry());
-                FileUtils.setValue(THERMAL_PATH, (String) value);
-                break;
-
             case PREF_ENABLE_DIRAC:
                 try {
                     DiracService.sDiracUtils.setEnabled((boolean) value);
@@ -242,7 +227,7 @@ public class DeviceSettings extends PreferenceFragment implements
                     this.getContext().stopService(fpsinfo);
                 }
                 break;
-                
+
             default:
                 break;
         }
