@@ -736,11 +736,13 @@ vendor/lib/libsubsystem_control.so|fe08da9f6a0e73a97231055c4ca8279a68432476
 vendor/lib64/libSubSystemShutdown.so|c934b2df57be86fdfb9bdf2046f9289af5e7a62c
 vendor/lib64/libsubsystem_control.so|b2e8c7eb9d999137ae99ea38f85d7dac59c6dcc2
 
-# Thermal - from phoenix_sprout-11-RKQ1.201123.002
--vendor/lib/libthermalclient.so|2506026608690f1f91eebbafc622c51857354dfe
--vendor/lib64/libthermalclient.so|11a7b517eff8a0abea205c8cbbd8c21eea528b4f
-vendor/bin/thermal-engine|6dc35e88ec392068357544048a2f50b37ea766d3
-vendor/lib64/libthermalioctl.so|8bf02f5fbd8010f870955c8603b6c2c174168d2b
+# Thermal - from wayne Miui 9.7.4
+-vendor/lib/libthermalclient.so|d5c6c82b15423e95e991d757bab1b4a27fb88848
+-vendor/lib64/libthermalclient.so|3412ce67da6a58d7f44a65e6b8af8cc5bfb9f506
+vendor/bin/thermal-engine|0be3686204fc600f8dd8607fff10cd7fd273186e
+vendor/lib/libthermalfeature.so|1f1eb616ba26b309a2fda7de40c2163a4acaaa35
+vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
+vendor/lib64/libthermalioctl.so|7c7a784d8ead3d932d164cfc953b09e621060d90
 
 # Time services -from LA.UM.9.6.2.r1-04100-89xx.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
