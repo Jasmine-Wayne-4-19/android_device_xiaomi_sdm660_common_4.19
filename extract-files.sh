@@ -28,9 +28,9 @@ if [[ -z "$DEVICE_DIR" ]]; then
     DEVICE_DIR="${COMMON_DIR}/../${DEVICE}"
 fi
 
-ROOT="$COMMON_DIR"/../../..
+ANDROID_ROOT="$COMMON_DIR"/../../..
 
-HELPER="$ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -105,7 +105,7 @@ function blob_fixup() {
 }
 
 # Initialize the common helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ROOT" true $CLEAN_VENDOR
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ANDROID_ROOT" true $CLEAN_VENDOR
 
 if [[ "$ONLY_DEVICE" = "false" ]] && [[ -s "${COMMON_DIR}"/proprietary-files.txt ]]; then
     extract "$COMMON_DIR"/proprietary-files.txt "$SRC" "${KANG}" --section "${SECTION}"
@@ -115,7 +115,7 @@ if [[ "$ONLY_COMMON" = "false" ]] && [[ -s "${DEVICE_DIR}"/proprietary-files.txt
         IS_COMMON=false
     fi
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$ROOT" "$IS_COMMON" "$CLEAN_VENDOR"
+    setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" "$IS_COMMON" "$CLEAN_VENDOR"
     extract "${DEVICE_DIR}"/proprietary-files.txt "$SRC" "${KANG}" --section "${SECTION}"
 fi
 

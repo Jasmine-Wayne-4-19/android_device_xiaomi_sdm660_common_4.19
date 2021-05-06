@@ -31,9 +31,9 @@ if [[ -z "$DEVICE_DIR" ]]; then
     DEVICE_DIR="${COMMON_DIR}/../${DEVICE}"
 fi
 
-ROOT="$COMMON_DIR"/../../..
+ANDROID_ROOT="$COMMON_DIR"/../../..
 
-HELPER="$ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -41,7 +41,7 @@ fi
 . "$HELPER"
 
 # Initialize the common helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ANDROID_ROOT" true
 
 if ([[ "$ONLY_DEVICE" = "false" ]] || [[ -z "$ONLY_DEVICE" ]]) && [[ -s "${COMMON_DIR}"/proprietary-files.txt ]]; then
     # Copyright headers and guards
@@ -60,7 +60,7 @@ if ([[ "$ONLY_COMMON" = "false" ]] || [[ -z "$ONLY_COMMON" ]]) && [[ -s "${DEVIC
     fi
     # Reinitialize the helper for device
     INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "$DEVICE" "$VENDOR" "$ROOT" "$IS_COMMON" "$CLEAN_VENDOR"
+    setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" "$IS_COMMON" "$CLEAN_VENDOR"
     # Copyright headers and guards
     write_headers "$GUARDED_DEVICES"
     # The standard device blobs
