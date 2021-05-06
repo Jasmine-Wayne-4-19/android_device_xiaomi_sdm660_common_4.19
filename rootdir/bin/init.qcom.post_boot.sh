@@ -2404,6 +2404,10 @@ case "$target" in
             echo 1000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
             echo 1113600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
+            # Report max frequency to unity tasks
+            echo "UnityMain,libunity.so" > /proc/sys/kernel/sched_lib_name
+            echo 255 > /proc/sys/kernel/sched_lib_mask_force 255
+
             # Enable bus-dcvs
             for device in /sys/devices/platform/soc
             do
