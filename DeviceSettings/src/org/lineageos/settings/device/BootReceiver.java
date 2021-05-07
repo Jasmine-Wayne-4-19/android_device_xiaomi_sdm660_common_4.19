@@ -30,7 +30,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MIC_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
-    
+
     public void onReceive(Context context, Intent intent) {
 
         // KCAL
@@ -59,7 +59,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
         }
-        
+
         // Audio Gain
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 0);
@@ -75,12 +75,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 
-        // Thermal
-        FileUtils.setValue(DeviceSettings.THERMAL_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_THERMAL, 0));
-
         // FPS Info
-        boolean enabled = Settings.Secure.getInt(context.getContentResolver(), 
+        boolean enabled = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_KEY_FPS_INFO, 0) == 1;
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
