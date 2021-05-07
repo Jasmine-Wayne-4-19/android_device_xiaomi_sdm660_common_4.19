@@ -39,6 +39,9 @@ allow hal_fingerprint_sdm660 storage_file:lnk_file read;
 allow hal_fingerprint_sdm660 vendor_mpctl_prop:file read;
 allow hal_fingerprint_sdm660 vendor_fp_prop:property_service set;
 allow hal_fingerprint_sdm660 vendor_fp_prop:file { getattr open read };
+allow hal_fingerprint_sdm660 sysfs_fingerprint:file { write read };
+allow hal_fingerprint_sdm660 sysfs_wakeup:file { write open };
+allow hal_fingerprint_sdm660 sysfs:file { write };
 
 binder_call(hal_fingerprint_sdm660, hal_perf_default)
 r_dir_file(hal_fingerprint_sdm660, firmware_file)
