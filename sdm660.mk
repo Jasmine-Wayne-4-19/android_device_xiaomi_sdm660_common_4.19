@@ -212,6 +212,10 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
+# DeviceDoze
+PRODUCT_PACKAGES += \
+    DeviceDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -600,6 +604,10 @@ PRODUCT_PACKAGES += \
 # WiFi Display JAR
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# DeviceSettings
+PRODUCT_PACKAGES += \
+   DeviceSettings
 
 # Force triple frame buffers
 PRODUCT_PROPERTY_OVERRIDES += \
