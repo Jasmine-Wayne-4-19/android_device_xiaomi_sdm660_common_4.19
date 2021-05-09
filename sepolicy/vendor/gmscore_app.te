@@ -1,1 +1,2 @@
 binder_call(gmscore_app, hal_memtrack_default);
+allow gmscore_app exported_camera_prop:file { read open getattr };
