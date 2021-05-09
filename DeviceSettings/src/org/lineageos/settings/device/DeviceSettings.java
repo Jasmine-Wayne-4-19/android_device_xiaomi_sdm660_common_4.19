@@ -67,9 +67,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
-    public static final String PREF_THERMAL = "thermal";
-    public static final String THERMAL_PATH = "/sys/devices/virtual/thermal/thermal_message/sconfig";
-
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
@@ -82,7 +79,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
     private Preference mClearSpeakerPref;
 
-    private SecureSettingListPreference mTHERMAL;
     private SecureSettingSwitchPreference mFastcharge;
 
     private SecureSettingSwitchPreference mEnableDirac;
@@ -148,11 +144,6 @@ public class DeviceSettings extends PreferenceFragment implements
             return true;
         });
 
-        mTHERMAL = (SecureSettingListPreference) findPreference(PREF_THERMAL);
-        mTHERMAL.setValue(FileUtils.getValue(THERMAL_PATH));
-        mTHERMAL.setSummary(mTHERMAL.getEntry());
-        mTHERMAL.setOnPreferenceChangeListener(this);
-
         boolean enhancerEnabled;
         try {
             enhancerEnabled = DiracService.sDiracUtils.isDiracEnabled();
@@ -198,12 +189,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_MIC_GAIN:
                 FileUtils.setValue(MIC_GAIN_PATH, (int) value);
-                break;
-
-            case PREF_THERMAL:
-                mTHERMAL.setValue((String) value);
-                mTHERMAL.setSummary(mTHERMAL.getEntry());
-                FileUtils.setValue(THERMAL_PATH, (String) value);
                 break;
 
             case PREF_ENABLE_DIRAC:
