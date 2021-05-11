@@ -312,7 +312,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.xiaomi_parts.rc \
     init.verity.rc \
-    init.safailnet.rc \
     ueventd.qcom.rc
 
 # FM
