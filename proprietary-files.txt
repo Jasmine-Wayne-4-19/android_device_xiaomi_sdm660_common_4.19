@@ -477,13 +477,13 @@ vendor/lib64/libOmxQcelp13Dec.so|f0358c768da5f8098ffb33dd0d78ecbc59d53a4e
 vendor/lib64/libOmxWmaDec.so|17fcb6a109d8c8064bed2bdffb65be7d3bb06163
 vendor/lib64/libmm-color-convertor.so|a31488f971b5874f72c7f154000b450156a7c211
 
-# Mlipay - from wayne V9.7.4
-vendor/bin/mlipayd@1.1|13e9167024fd2dc49a56ed27e583057408dcc1eb
+# Mlipay - from wayne V12.0.2.0.PDCCNXM
+vendor/bin/mlipayd@1.1|4c30cfd1b32f99ff3043eadca8e7a4b7b9a00c79
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay.so|6cacf75f4a7eb50cbb7de384a3cfc1702a3a5f4a
-vendor/lib64/libmlipay@1.1.so|4dfa016779bcba8da2ff293e5112c678044c6474
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|d0bb854210433066945f9d6e7943d08a8435e746
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|785984e3c3b30671b78624484899dd418979cb56
+vendor/lib64/libmlipay.so|c988ff04fcd90621cf46d219bdbc7eef341d1ce6
+vendor/lib64/libmlipay@1.1.so|7d07b19faa36c62babf39a41b2baf8de370d706c
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|2c05d2902c757410aec30c6a5d0bf77b016583fa
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|0c4bb0c8ba1cbf357bb0b5117e93db0382ffcf49
 
 # Perf - from taimen-user 11 RP1A.201005.004.A1 6934943 release-keys
 vendor/lib/libqti-perfd-client.so|08b0cd20dbc79645ee73ea4fdc5221d41d09588a
