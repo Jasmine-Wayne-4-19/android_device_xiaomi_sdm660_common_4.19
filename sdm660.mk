@@ -88,7 +88,7 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 endif
 
-# Adapt Launch 
+# Adapt Launch
 PRODUCT_COPY_FILES += \
 $(COMMON_PATH)/configs/lm/AdaptLaunchFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AdaptLaunchFeature.xml \
 
@@ -326,7 +326,7 @@ endif
 # Ion
 PRODUCT_PACKAGES += \
     libion
-    
+
 # Iorap
 PRODUCT_PACKAGES += \
     iorap-app-startup-runner
@@ -548,14 +548,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
-
-# Thermal Controller
-PRODUCT_PACKAGES += \
-   ThermalController
 
 # Thermal Conf
 PRODUCT_COPY_FILES += \
