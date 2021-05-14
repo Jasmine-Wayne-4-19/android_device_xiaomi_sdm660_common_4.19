@@ -1,4 +1,5 @@
 allow hal_power_stats_default sysfs_kgsl:file { r_file_perms getattr };
+allow hal_power_stats_default sysfs:dir { open read };
 
 # Needed to traverse odpm files
 r_dir_file(hal_power_stats_default, sysfs_iio_devices)
