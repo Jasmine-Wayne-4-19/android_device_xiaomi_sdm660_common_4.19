@@ -571,10 +571,6 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
-# Thermal Controller
-PRODUCT_PACKAGES += \
-   ThermalController
-
 # Thermal Conf
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
