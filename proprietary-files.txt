@@ -67,13 +67,14 @@ vendor/lib64/libaudioalsa.so|bdf49c709df8a1a7a7e232a6cb1ba6d15af594c7
 vendor/lib64/libaudioparsers.so|ad9394501d467fd264675ead74a4e6bab34eadd5
 vendor/lib64/libqtigef.so|1b7fa4dacefd97f019c342477ff57dc861e70277
 
-# Alarm - from LA.UM.8.2.1.r1-05600-sdm660
--product/app/PowerOffAlarm/PowerOffAlarm.apk|d4d276e5ccbb923aa2080f48de5d85b8bdaab9ba
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|7ee99a3500352531897ea13da1b1667797020488
-vendor/bin/power_off_alarm|0e852641f15cd2ed34d630ca3c902cc617ea14d4
+# Alarm - from LA.UM.9.11.r1-03200-NICOBAR.0
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|bc906abd03e4a243201dde626b6580fd8a4f73ce
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
+vendor/bin/power_off_alarm|a225c7e197fd09bac849ae539c3caccbc4aa6ee3
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|d9f24646f315c7e8918966ca71011d83d39c82cf
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|48eb352228fe38184e3bbd2917a2ba7a8d0898f1
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f48d221f6678ff39bdb3e667c6e1a0f399c29232
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|384e626e393aa647bc63592fda36ab0475d27b5b
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|bfb13c00bef9355a0f0f54dc6773a4d14b7eaf95
 
 # ANT+ - from LA.UM.8.2.1.r1-05600-sdm660
 -lib/libantradio.so:system_ext/lib/libantradio.so|523f108cabe6c0a2a52fa4476ada8b65eacdd9a9
