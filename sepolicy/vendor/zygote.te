@@ -1,2 +1,2 @@
-allow zygote exported_camera_prop:file { open read getattr write };
+allow zygote exported_camera_prop:file { open map read getattr write };
 allow zygote zygote:capability { kill };
