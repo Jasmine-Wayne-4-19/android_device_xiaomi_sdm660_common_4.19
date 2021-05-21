@@ -140,8 +140,9 @@ vendor/lib64/libcdsp_default_listener.so|78899710541d42c57ff3d6a231f50e274e1d4cc
 vendor/lib64/libcdsprpc.so|9df65cc5f9eb60030a2013aa37a2906fe3be1c51
 vendor/lib64/libsysmon_cdsp_skel.so|40d3511922c744016c419983b18f97952c23fee5
 
-# Charger - from LA.UM.9.6.2.r1-03600-89xx.0
-vendor/bin/hvdcp_opti|fbaef63654a9b58a352aafe5537baa7496c11b4b
+# Charger - from LA.UM.9.11.r1-03200-NICOBAR.0
+vendor/bin/hvdcp_opti|abb0d95d55829e0b1937f32070a6a582285bf961
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
 # CNE - from LA.UM.9.12.r1-10800-SMxx50.0 | LA.QSSI.11.0.r1-10400-qssi.0
 -vendor/app/CneApp/CneApp.apk|f90e9b497c0bd9328e8e63120615f2704489dbbc
@@ -741,12 +742,11 @@ vendor/lib64/libsubsystem_control.so|b2e8c7eb9d999137ae99ea38f85d7dac59c6dcc2
 -vendor/lib64/libthermalclient.so|ee1654db87e53a986ca68e6b3e6af2264b86b5d7
 vendor/bin/thermal-engine|dcac44ec87aae10821d3aabd80684998a10bdfab
 
-# Time services -from LA.UM.9.6.2.r1-04100-89xx.0
+# Time services -from LA.UM.9.11.r1-03200-NICOBAR.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
--vendor/lib/libtime_genoff.so|0e73ee0b125f4538d4afd76b4a4cd009176e98b1
--vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
-vendor/bin/time_daemon|a27ac4aeafb41158b96046edbd553ae76835b4ed
+vendor/bin/time_daemon|492b74d17bae95ceb148dc0407bf8a09723a7310
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+-vendor/lib64/libtime_genoff.so|28af58875cac12d64cc6d58d6959a4cf681a00df
 
 # WiFi - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/cnss-daemon|78ebe10a7a46e22d36864406b23f4164b522115c
