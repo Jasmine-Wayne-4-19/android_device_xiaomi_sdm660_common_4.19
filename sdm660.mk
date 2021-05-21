@@ -311,6 +311,7 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
+    charger_fstab.qti \
     init.class_main.sh \
     init.goodix.sh \
     init.msm.usb.configfs.rc \
@@ -320,6 +321,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
+    init.qti.chg_policy.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     init.xiaomi_parts.rc \
