@@ -2384,6 +2384,9 @@ case "$target" in
         case "$soc_id" in
                 "317" | "324" | "325" | "326" | "345" | "346" )
 
+            # Enable EAS
+            echo 1 > /proc/sys/kernel/sched_energy_aware
+
             # cpuset settings
             echo 0-7 > /dev/cpuset/top-app/cpus
             echo 0-3,6-7 > /dev/cpuset/foreground/cpus
