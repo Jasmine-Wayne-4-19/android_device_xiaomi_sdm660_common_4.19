@@ -644,6 +644,9 @@
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">200%</fraction>
+  
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
 
     <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
           For this time after the screen turns on, the Power Manager
@@ -1145,7 +1148,7 @@
     <!-- Amount of time in ms the user needs to press the relevant keys to trigger the
          screenshot chord -->
    <integer name="config_screenshotChordKeyTimeout">0</integer>
-   
+
    <!-- The component name, flattened to a string, for the default autofill service
          to  enabled for an user. This service must be trusted, as it can be activated
          without explicit consent of the user. If no autofill service with the
