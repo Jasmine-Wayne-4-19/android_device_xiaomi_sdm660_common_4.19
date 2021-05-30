@@ -1,1 +1,1 @@
-allow netutils_wrapper netutils_wrapper:capability { kill };
+allow netutils_wrapper netutils_wrapper:capability { kill sys_admin };
