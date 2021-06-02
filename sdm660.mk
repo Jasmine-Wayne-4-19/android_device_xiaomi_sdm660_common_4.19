@@ -602,6 +602,13 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
+# ADB 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
+
 # WiFi Display JAR
 PRODUCT_BOOT_JARS += \
     WfdCommon
