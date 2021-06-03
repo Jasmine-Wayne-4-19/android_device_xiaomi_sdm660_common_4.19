@@ -190,6 +190,10 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk )
 
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
@@ -370,6 +374,7 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libhypv_intercept \
     libmm-omxcore \
+		libOmxSwVencHevc \
     libOmxCore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -602,7 +607,7 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-# ADB 
+# ADB
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
