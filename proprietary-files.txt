@@ -423,14 +423,15 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 # IRQ balance - from LA.UM.8.2.r1-06700-sdm660.0
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 
-# Listen - from LA.UM.8.2.1.r1-05600-sdm660
-vendor/lib/hw/sound_trigger.primary.sdm660.so|f623b7055ead3bfa2139c30a0f2b2cf721411e0b
-vendor/lib/libadpcmdec.so|8c72aa1812bfa749f266020366894c8a3873d99c
-vendor/lib/libgcs-calwrapper.so|cbf3dbe43161b68adfaf48a9da4e7fedd7b02f5a
-vendor/lib/libgcs-ipc.so|b125f360381aa8c7ebdff04585520770ee0c8902
-vendor/lib/libgcs-osal.so|5f0c6798dbeb9c806706b0cf217440662452364c
-vendor/lib/libgcs.so|ccb6ac9c27021cf4f2ec09994742c38b700c2583
-vendor/lib/libsmwrapper.so|7f7bd7045ced84928ec46b457ec5f21d5228ea3a
+# Listen - from lemon 21.4.13
+vendor/lib/hw/sound_trigger.primary.bengal.so:vendor/lib/hw/sound_trigger.primary.sdm660.so|d7532a84cd824bc65a0ae4c214ee590decb4151e
+vendor/lib/libadpcmdec.so|491fedbdcf9a395340ce4142c277156c0056bcf8
+vendor/lib/libgcs-calwrapper.so|d2e93c944c90dd21fe26ff8e23acbaa399ae0ea4
+vendor/lib/libgcs-ipc.so|13d1d48a50c760a11eeacef1b5eae93e4d1ab47b
+vendor/lib/libgcs-osal.so|0e762ecaf6b0d59e5322323b0fef17e8c76d0b4a
+vendor/lib/libgcs.so|f21cfb8ab944d57b15374b9a7a7eeac7a022232a
+vendor/lib/liblistensoundmodel2.so|301dbebde95b3f7ac5dc0d9667d66f10d60f49fc
+vendor/lib/libsmwrapper.so|a57ed968010731a91f0c42321387ee1ab8d878cc
 
 # Media - from LA.UM.8.2.r1-07400-sdm660.0
 vendor/lib/libAlacSwDec.so|d082d6eeedd8a84bd1b720d515ede48e74392dd4
