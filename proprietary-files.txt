@@ -125,8 +125,9 @@ vendor/lib64/libbtnv.so|a6793a7b93fa607fcec39da7479566f84ed39aa4
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9b7ae20ce9d6d2a67fdac94268cec441278cca3d
 vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|e08969ef1897ec5958894323f7d6e730a1d7ce25
 
-# Charger - from LA.UM.8.2.1.r1-05600-sdm660
-vendor/bin/hvdcp_opti|7e2c6def67e8d3eccb7c2df80fbe73652aef2a0e
+# Charger - from LA.UM.9.1-r1-06700-Smxxx0.0
+vendor/bin/hvdcp_opti|bd71e443a58117aa645553a816805b0c60eafce6
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
 # CNE - from curtana V12.0.1.0.RJWINXM
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|88da95df5925ab3c173f951cfe56c95699908359
@@ -478,7 +479,7 @@ vendor/lib64/libmlipay@1.1.so|7d07b19faa36c62babf39a41b2baf8de370d706c
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|2c05d2902c757410aec30c6a5d0bf77b016583fa
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|0c4bb0c8ba1cbf357bb0b5117e93db0382ffcf49
 
-# Perf - From LA.UM.8.2.1.r1-05600-sdm660
+# Perf - From LA.UM.9.1-r1-06700-Smxxx0.0
 vendor/lib64/libadaptlaunch.so|cf784401fc827e5195d595a6d855ec89ea8c22bf
 vendor/lib64/libappclassifier.so|d5956c2dc9344ddcca0e78d84c393320c2e0cc97
 vendor/lib64/libgameoptfeature.so|b135489d253f0a8d7884238fe7887eb85b87745d
@@ -743,17 +744,16 @@ vendor/lib/libsubsystem_control.so|fe08da9f6a0e73a97231055c4ca8279a68432476
 vendor/lib64/libSubSystemShutdown.so|c934b2df57be86fdfb9bdf2046f9289af5e7a62c
 vendor/lib64/libsubsystem_control.so|b2e8c7eb9d999137ae99ea38f85d7dac59c6dcc2
 
-# Thermal - from LA.UM.8.2.1.r1-05600-sdm660
-vendor/bin/thermal-engine|e012f4c1bd057281707bd160a6ee2479b7db8667
--vendor/lib/libthermalclient.so|34b6ee056ae8a6df578fc243f8acd3567a49d97b
--vendor/lib64/libthermalclient.so|20f1fd238fc81bf1c6828ec416121c0ef66e0df1
+# Thermal - from LA.UM.9.1-r1-06700-Smxxx0.0
+vendor/bin/thermal-engine|e74184e124c41e51535fad6a6ad9cc089695211b
+-vendor/lib/libthermalclient.so|31533667b7f8137670189a14c68ccb51c7ca6dab
+-vendor/lib64/libthermalclient.so|41274c82e1a472d12b2ebcb4156f7f77b109efa8
 
-# Time services - from LA.UM.8.2.1.r1-05600-sdm660
--vendor/app/TimeService/TimeService.apk|c935b678fdaed033513f044f6492361c3370f9f0
--vendor/lib/libtime_genoff.so|d3d9308d4a5d736eb442f6e9daab47cdc5bb61c7
--vendor/lib64/libtime_genoff.so|216cbb72e22a0ca76d766dc0b84055c5b31e0a4c
-vendor/bin/time_daemon|a213fb73b9b1cbbdb631851a337ffd64ae08367e
+# Time services -from LA.UM.9.1-r1-06700-Smxxx0.0
+-vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
+vendor/bin/time_daemon|492b74d17bae95ceb148dc0407bf8a09723a7310
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+-vendor/lib64/libtime_genoff.so|28af58875cac12d64cc6d58d6959a4cf681a00df
 
 # WiFi - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/cnss-daemon|78ebe10a7a46e22d36864406b23f4164b522115c
