@@ -199,6 +199,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno
 
+# DRM Service
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 # HAL1 apps list
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.hal1.packagelist=com.android.camera,com.android.camera2,com.instagram.android \
