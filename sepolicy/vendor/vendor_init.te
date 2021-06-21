@@ -22,7 +22,7 @@ allow vendor_init {
   audio_prop
   persist_debug_prop
   vendor_qcom_ims_prop
-  thermal_engine_prop
+  vendor_thermal_prop
   vendor_ssr_prop
   vendor_fp_prop
 }:property_service set;
