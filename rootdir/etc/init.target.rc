@@ -39,6 +39,12 @@ on init
     # Setup dynamic stune boost
     write /dev/stune/top-app/schedtune.sched_boost 15
 
+    # Set minimum gpu frequency
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq  160
+
+    # Set maximum gpu frequency
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq  650
+
     # Setup permission for Power HAL
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
