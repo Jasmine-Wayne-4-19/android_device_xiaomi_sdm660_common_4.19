@@ -41,6 +41,10 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|d2174a2a4a680e93ee4262b5e
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|487f830aca26c85ef79c8b599b2f03668ab732b5
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so|2da97f61c1d14f1f9a38aecd8ab89a1f6fa8d991
 
+# ADSP Modules - from jasmine-V11.0.26.0.QDIMIXM-release-keys
+vendor/lib/rfsa/adsp/dirac_resource.dar|7728d5b2ee2927a01df5bd6d7edae3736186c844
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
+
 # CDSP - from LA.UM.8.2.r1-06700-sdm660.0
 lib/libcdsprpc_system.so|111797b70a5274be1af0b343ef54966478bfcd39
 lib64/libcdsprpc_system.so|81db24d014a39b109a8b65b770b24344d0dfe9d2
@@ -210,8 +214,8 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|01256a945becaa88788c384a70a15fe
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|e039cd57df22cd762f7054b0f2ffe8ce50fade1f
 vendor/lib64/vendor.qti.latency@2.0.so|c4de1ba004bd8d07dbe92f58abb6250c7bbaf968
 
-# Dirac - from Xiaomi
-vendor/etc/diracvdd.bin|b54270d4f44acc2bb2be8e1cdb3e54fb2c6be07b
+# Dirac - from jasmine-V11.0.26.0.QDIMIXM-release-keys
+vendor/etc/diracvdd.bin|f9b07ace60490649c44411504909c7bf8bc73d59
 vendor/etc/diracmobile.config|88fa19095df9e256f0af510df266f749bf60e258
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
