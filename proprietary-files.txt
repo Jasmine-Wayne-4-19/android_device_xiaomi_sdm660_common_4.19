@@ -41,6 +41,10 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|d2174a2a4a680e93ee4262b5e
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|487f830aca26c85ef79c8b599b2f03668ab732b5
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so|2da97f61c1d14f1f9a38aecd8ab89a1f6fa8d991
 
+# ADSP Modules - from jasmine-V11.0.26.0.QDIMIXM
+vendor/lib/rfsa/adsp/dirac_resource.dar|7728d5b2ee2927a01df5bd6d7edae3736186c844
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
+
 # CDSP - from LA.UM.8.2.r1-06700-sdm660.0
 lib/libcdsprpc_system.so|111797b70a5274be1af0b343ef54966478bfcd39
 lib64/libcdsprpc_system.so|81db24d014a39b109a8b65b770b24344d0dfe9d2
