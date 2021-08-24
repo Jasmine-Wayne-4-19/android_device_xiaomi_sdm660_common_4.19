@@ -20,6 +20,9 @@ type proc_dt2w, fs_type, proc_type;
 type sysfs_tap_to_wake, sysfs_type, fs_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
 
+# HVDCP
+type vendor_sysfs_hvdcp, fs_type, sysfs_type;
+
 # XiamiParts
 type sysfs_fpsinfo, sysfs_type, fs_type;
 type sysfs_headphonegain, sysfs_type, fs_type;

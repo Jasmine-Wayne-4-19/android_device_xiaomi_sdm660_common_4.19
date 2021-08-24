@@ -8,3 +8,4 @@ dontaudit qti_init_shell self:capability { dac_override dac_read_search };
 allow qti_init_shell qti_init_shell:perf_event { cpu };
 allow qti_init_shell vendor_default_prop:property_service { set };
 allow qti_init_shell system_prop:property_service { set };
+allow qti_init_shell self:perf_event cpu;

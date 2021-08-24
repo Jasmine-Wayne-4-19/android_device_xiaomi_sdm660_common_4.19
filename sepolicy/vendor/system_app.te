@@ -19,3 +19,4 @@ allow system_app wificond:binder call;
 set_prop(system_app, system_prop);
 allow system_app sysfs_zram:file r_file_perms;
 allow system_app sysfs_thermal:file rw_file_perms;
+get_prop(system_app, system_prop);
